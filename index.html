@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+var festival = ''
+var random = Math.floor(Math.random()*3)
+function decidefestival(){
+    if (random == 0){
+ return festival = 'divali'
+}
+else if (random == 1){
+return festival = 'navratri'
+}
+else if (random == 2){
+return festival = 'holi'
+}
+}
+var a = decidefestival()
+    
+function prepareforfestival(festival){
+    var days;
+    if (festival == 'divali'){
+         days = 30
+    }
+    else if (festival == 'navratri'){
+         days = 40
+    }
+    else if (festival == 'holi'){
+        days = 50
+    }
+    return days
+}
+var b = prepareforfestival(a)
+function festivaldays(festival, days){
+    console.log("You are in the" + " " + festival + " " + "festival, and you have" + " " + days + " " + "days till the event!")
+}
+
+
+festivaldays(a,b)
+
+var position = ''
+var random = Math.floor(Math.random()*3)
+function decideposition(){
+    if (random == 0){
+ return position = 'first'
+}
+else if (random == 1){
+return position = 'second'
+}
+else if (random == 2){
+return position = 'third'
+}
+}
+var c = decideposition()
+
+function presentmedals(festival){
+    var medal = ''
+    if (position == 'first'){
+         medal = 'gold'
+    }
+    else if (position == 'second'){
+         medal = 'silver'
+    }
+    else if (position == 'third'){
+        medal = 'bronze'
+    }
+    return medal
+}
+var d = presentmedals(c)
+
+function presentpodium(position, medal){
+    console.log("You are in" + " " + position + " " + "place and you get the" + " " + medal + " " + "medal!")
+}
+presentpodium(c,d)
+
+
+</script>    
+</html>
